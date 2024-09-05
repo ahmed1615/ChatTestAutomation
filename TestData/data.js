@@ -1,0 +1,9 @@
+const  frontUrl = "http://localhost:3000";
+const  backUrl= "http://localhost:5001/api";
+const registerPathParameter= "/users/register";
+const loginPathParameter = "/users/login";
+const sendMessagePathParameter= "/messages/send";
+const messageHistoryPathParameter = "/messages/history";
+const validUserName ="hitest";
+const validPassword ="hitest";
+module.exports = {frontUrl, backUrl,registerPathParameter, loginPathParameter, validUserName, validPassword, sendMessagePathParameter, messageHistoryPathParameter}
