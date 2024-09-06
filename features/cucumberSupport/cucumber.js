@@ -6,7 +6,7 @@ setDefaultTimeout(150000);
 const { setWorldConstructor } = require('@cucumber/cucumber');
 const { chromium } = require('playwright');
 
-class CustomWorld {
+class gonfic {
   async openBrowser() {
     this.browser = await chromium.launch({ headless: false });
     this.page = await this.browser.newPage();
@@ -17,7 +17,7 @@ class CustomWorld {
   }
 }
 
-setWorldConstructor(CustomWorld);
+setWorldConstructor(gonfic);
 
 module.exports = {
   default: {
