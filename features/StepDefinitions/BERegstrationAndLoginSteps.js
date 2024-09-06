@@ -31,8 +31,8 @@ Then('the response status should be {int}', async function (statusCode) {
 });
 
 Then('the response should contain {string}', async function (message) {
-  const responseData = await this.response.json(); 
-  expect(responseData.message).toContain(message);
+  const responseBody = await this.response.json(); 
+  expect(responseBody.message).toContain(message);
 });
 
 Given('I send a POST request to register a new user with random username and password and login', async function () {

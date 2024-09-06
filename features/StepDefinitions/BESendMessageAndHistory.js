@@ -4,7 +4,27 @@ const fetch = require('node-fetch');
 const { backUrl, validUserName } = require('../../TestData/data.js');
 const { sendMessagePathParameter, messageHistoryPathParameter } = require('../../TestData/data.js');
 const { connectToMongoDB } = require('../../utiles/MongoDBConnection.js');
+const {generateRandomString} = require('../../TestData/generator.js')
 const Message = require('../../utiles/messageSchema.js'); 
+
+
+
+When('I send a POST request to send a message', async function () {
+  const username = validUserName;
+  const textMessage = generateRandomString();
+ 
+  const data = {
+    sender: username,
+    text: textMessage
+  };
+    this.response = await fetch(backUrl + sendMessagePathParameter, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+});
 
 When('I send post request for sending message {string} and verify the history', async function (message) {
   const username = validUserName;
