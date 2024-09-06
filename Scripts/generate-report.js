@@ -10,10 +10,10 @@ const options = {
   metadata: {
     'App Version': '7.2.1',
     'Test Environment': 'Development',
-    'Browser': 'API',
+    'Browser': 'API, chrome',
     'Platform': 'Windows, mac and mob',
     'Parallel': 'Scenarios',
-    'Executed': 'pipeline github actions'
+    'Executed': 'from local or pipeline'
   }
 };
 
